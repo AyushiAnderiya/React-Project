@@ -1,1 +1,1 @@
-This is my counter project in which I learn how to us use hooks and usestate() .
+This is my counter project in which I learn how to use hooks and usestate() .
