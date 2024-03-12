@@ -1,0 +1,29 @@
+<figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+        <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-l rounded-full mx-auto" src="/its_me.jpeg" alt="" width="384" height="512" />
+        <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+          <blockquote>
+            <p class="text-lg font-medium">
+            Meet Aarushi, a skilled web developer breaking barriers in the digital realm. <br />
+            With a flair for design and coding finesse, she creates captivating websites <br />
+            that leave a lasting impression. Elevate your online presence with her expertise,<br />
+             where innovation meets seamless functionality.
+            </p>
+          </blockquote>
+          <figcaption class="font-medium">
+            <div class="text-sky-500 dark:text-sky-400">
+              Aarushi 
+            </div>
+            <div class="text-slate-700 dark:text-slate-500">
+              Enterprener,India
+            </div>
+          </figcaption>
+        </div>
+      </figure>
+
+      [
+    { username: "Ayushi", Url:"./ayu.jpeg"},
+    { username: "Suhani", Url:"./suhani.jpeg"},
+    { username: "Ishika", Url:"./ishu.jpeg"},
+    { username: "Pallavi", Url:"./pallavi.jpeg"},
+    { username: "Anjali", Url:"./anjali.jpeg"},
+    { username: "Kirti", Url:"./kirti.jpeg"}];
