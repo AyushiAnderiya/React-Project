@@ -3,8 +3,9 @@ import './App.css'
 
 function App() {
   let [counter,setCounter]=useState(5)
-  
   // let counter=5;
+  //prevCounter se previous counter mil jata h 
+  //agar ek hi chiz me 3 se 4 bar update karna ho then apan prevCounter use karte h
   const addValue=()=>{
     counter=counter+1;
     if(counter<20)
@@ -29,5 +30,5 @@ function App() {
     </>
   )
 }
-
 export default App
+
