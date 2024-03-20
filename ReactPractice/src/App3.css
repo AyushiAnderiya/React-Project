@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+#main{
+    background-color: crimson;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-flex;
+    padding: 1vh 20vw;
+    border: 5px outset;
+    border-radius: 20px;
+}
