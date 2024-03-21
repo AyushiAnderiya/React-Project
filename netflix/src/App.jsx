@@ -1,19 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css' 
 
+function App({ data }) {
   return (
     <>
-      <p className="text-3xl font-bold underline">
-        Click on the Vite and React logos to learn more
-      </p>
+      <section className="main-card--cointainer">
+        {data.map((curElem) => {
+          const { id, Name, src, links } = curElem;
+          return (
+            <>
+              <div className="cards p-3" key={id}>
+                <div className="card">
+                  <img src={src} alt="movie" className="card__img" />
+                  <div className="card_info">
+                    <h3 className="card_title">{Name}</h3>
+                    <a href={links} target="_blank">
+                      <button className='btn' >Watch Now</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </>
+          )
+        })}
+      </section >
     </>
-  )
-}
-
-
+  );
+};
 export default App
+
