@@ -9,7 +9,7 @@ function App({ data }) {
           const { id, Name, src, links } = curElem;
           return (
             <>
-              <div className="cards p-3" key={id}>
+              <div className="cards p-3 " key={id}>
                 <div className="card">
                   <img src={src} alt="movie" className="card__img" />
                   <div className="card_info">

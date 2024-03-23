@@ -10,12 +10,14 @@
 .cards{
 display: inline-flex;
 margin: 5px 40px;
+
 }
 .card{
  /* background-color: #F9624A; */
  background-color: black;
  color: white;
  display: inline-block;
+ box-shadow:  2px 4px 8px 0 rgba(110, 6, 6, 0.399), 2px 6px 20px 0 rgba(255, 255, 255, 0.19);;
 }
 
 .card_title{
@@ -38,4 +40,5 @@ margin: 5px 40px;
   font-family:"Nova Cut","Balthazar", serif;
   padding: 4px 104px;
   font-weight: bolder;
+  
 }
