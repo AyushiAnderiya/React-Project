@@ -22,7 +22,22 @@ const SlowM = ({ x, y, z }) => {
     );
   }
 }
-
+const result=()=>{
+  if(a>b){
+    return(
+      <div className="ab">
+        <h1>Fantastic win, congrats! 🤩</h1>
+      </div>
+    );
+  }
+  else{
+    return(
+      <div className="ab">
+        <h1>Better luck next time! 🤒</h1>
+      </div>
+    );
+  }
+}
 function App() {
   const A = ['🌙', '☀️'];
   const getRandomIndex = () => Math.floor(Math.random() * A.length);
@@ -76,6 +91,9 @@ function App() {
       {showSlowM2 && <SlowM x={x2} y={y2} z={z2} />}
       <button className='btn' id='third' onClick={handleThirdButtonClick}>3rd Try</button>
       {showSlowM3 && <SlowM x={x3} y={y3} z={z3} />}
+      <div className="res">
+      <result />
+      </div>
     </div>
   );
 }
