@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 let a=0,b=0;
-const SlowM = ({ x, y, z }) => {
+const SlowM = ({ x, y, z, onMatch, onMismatch }) => {
   if (x === y && x === z) {
-    a++;
+    onMatch();
     return (
       <div className="game">
         <h1>{x} {y} {z}</h1>
@@ -12,7 +12,7 @@ const SlowM = ({ x, y, z }) => {
       </div>
     );
   } else {
-    b++;
+    onMisMatch();
     return (
       <div className="game">
         <h1>{x} {y} {z}</h1>
@@ -22,7 +22,7 @@ const SlowM = ({ x, y, z }) => {
     );
   }
 }
-const result=()=>{
+const result=({a,b})=>{
   if(a>b){
     return(
       <div className="ab">
@@ -79,6 +79,16 @@ function App() {
     setShowSlowM3(true);
   };
 
+  const [matchCount, setMatchCount] = useState(0);
+  const [mismatchCount, setMismatchCount] = useState(0);
+
+  const handleMatch = () => {
+    setMatchCount(prevCount => prevCount + 1);
+  };
+
+  const handleMismatch = () => {
+    setMismatchCount(prevCount => prevCount + 1);
+  };
   return (
     <div className="main">
       <div className="head">
@@ -92,7 +102,7 @@ function App() {
       <button className='btn' id='third' onClick={handleThirdButtonClick}>3rd Try</button>
       {showSlowM3 && <SlowM x={x3} y={y3} z={z3} />}
       <div className="res">
-      <result />
+      <result a={c} b={d}/>
       </div>
     </div>
   );
