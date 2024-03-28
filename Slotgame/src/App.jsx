@@ -88,9 +88,6 @@ function App() {
     setY3(A[getRandomIndex()]);
     setZ3(A[getRandomIndex()]);
     setClickCount(prevCount => prevCount + 1);
-    console.log('x3:', x3);
-    console.log('y3:', y3);
-    console.log('z3:', z3);
     console.log('clickCount:', clickCount);
   };
 
@@ -107,6 +104,7 @@ function App() {
       <button className='btn' id='third' onClick={handleThirdButtonClick}>3rd Try</button>
       {x3 && y3 && z3 && clickCount === 3 && <SlowM x={x3} y={y3} z={z3} onMatch={() => setMatchCount(prevCount => prevCount + 1)} onMismatch={() => setMismatchCount(prevCount => prevCount + 1)} />}
       {(clickCount === 3) && <div className="res" ><Result a={matchCount} b={mismatchCount} /></div>}
+      <br /> <br />
     </div>
   );
 }
