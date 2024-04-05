@@ -3,17 +3,28 @@ import { format } from 'date-fns';
 import './App.css'
 
 function App(){
-  let [tdate,setdate]=useState(0);
+  let [tdate,setdate]=useState("Today's Date");
+  let[ttime,settime]=useState("Current Time");
+  const[visible,setvisible]=useState(false);
+  const[tvisible,settvisible]=useState(false);
   const handleClick=()=>{
     tdate=new Date();
     let formatted=format(tdate,"dd/MM/yyyy")
     setdate(formatted);
-    console.log(formatted);
+    setvisible(true);
   }
+  const handleTime=()=>{
+    ttime=new Date().toLocaleTimeString();
+    settime(ttime);
+    settvisible(true);
+  }
+ 
 return(
   <>
-  <h1>{tdate}</h1>
+  <h1 className={visible?"show":"hide"}>{tdate}</h1>
   <button onClick={handleClick}>Click</button>
+  <h1 className={tvisible?"show":"hide"}>{ttime}</h1>
+  <button onClick={handleTime}>Click</button>
   </>
 )
 }

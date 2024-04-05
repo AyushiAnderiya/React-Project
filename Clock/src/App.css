@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+.show{
+  background-color: rgb(5, 65, 122);
+  color: aliceblue;
+  padding: 5px 15px;
+  border: 7px outset rgb(46, 49, 56);
+  font-family:Cambria, Cochin, Georgia;
+}
+.hide{
+  padding: 5px 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
