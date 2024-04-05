@@ -7,6 +7,7 @@ function App(){
   let[ttime,settime]=useState("Current Time");
   const[visible,setvisible]=useState(false);
   const[tvisible,settvisible]=useState(false);
+  const[intervalStarted,setIntervalStarted]=useState(false);
   const handleClick=()=>{
     tdate=new Date();
     let formatted=format(tdate,"dd/MM/yyyy")
@@ -17,8 +18,13 @@ function App(){
     ttime=new Date().toLocaleTimeString();
     settime(ttime);
     settvisible(true);
+
+    if (!intervalStarted) {
+      setIntervalStarted(true); // Set the state to indicate the interval has been started
+      setInterval(handleTime, 1000); // Start the interval
+    }
   }
- 
+  
 return(
   <>
   <h1 className={visible?"show":"hide"}>{tdate}</h1>
