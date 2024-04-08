@@ -8,6 +8,7 @@ import Reducer from './Reducer.jsx'
 import Callback from './Callback.jsx'
 import Memo from './Memo.jsx'
 import Layout from './Layout.jsx'
+import Custom from './Custom.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Context /> */}
     {/* <Ref /> */}
     {/* <Reducer /> */}
-    <Layout />
+    {/* <Layout /> */}
+    {/* <Memo /> */}
+    {/* <Callback /> */}
+    <Custom />
   </React.StrictMode>,
 )
